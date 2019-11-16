@@ -5,7 +5,7 @@ import (
 
 	"github.com/fsnotify/fsnotify"
 	"github.com/kelseyhightower/confd/log"
-	"github.com/pastdev/clconf/clconf"
+	"github.com/pastdev/clconf/v2/clconf"
 )
 
 // Client provides a shell for the yaml client
