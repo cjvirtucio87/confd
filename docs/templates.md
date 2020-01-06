@@ -346,6 +346,16 @@ Alias for the [strings.Replace](https://golang.org/pkg/strings/#Replace) functio
 backend = {{replace $backend "-" "_" -1}}
 ```
 
+### seq
+
+`seq` creates a sequence of integers. It's named and used as GNU's `seq`.
+`seq` takes the first and the last element as arguments. So `seq 3 5` will generate `[3,4,5]`
+```
+{{- range $i := seq 0 (len "/foo/bar")}}
+{{- if $i}},{{end}}
+{{$i}}
+```
+
 ### lookupIP
 
 Wrapper for [net.LookupIP](https://golang.org/pkg/net/#LookupIP) function. The wrapper also sorts (alphabeticaly) the IP addresses. This is crucial since in dynamic environments DNS servers typically shuffle the addresses linked to domain name. And that would cause unnecessary config reloads.
